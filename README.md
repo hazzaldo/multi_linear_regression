@@ -34,7 +34,7 @@ Assumptions:
 
 The concept behind Multiple Linear Regression is that it&#39;s similar to Simple Linear Regression except we&#39;re trying to identify multiple causations that affects our outcome prediction:
 
-![](img\img1.PNG)
+![](img/img1.PNG)
 
 Of course, linear regression has assumptions:
 
@@ -50,19 +50,19 @@ Intuition:
 
 Our profit is the data that we&#39;re trying to predict, therefore it&#39;s the dependent variable. While all the other columns are the input data (independent variables).
 
-![](img\img2.PNG)
+![](img/img2.PNG)
 
 Therefore, our model equation will be the sum of all the independent variables (X), and where each independent variable is multiplied by a weight (b) that is adjusted by the model to optimise for the best prediction, plus a bias/coefficient (b0) to help adjust the outcome.
 
-![](img\img3.PNG)
+![](img/img3.PNG)
 
 However, with regards to the US state column, this is a word and not a number value. State is a categorical variable. Therefore, we need to transform them into dummy variables. This process involves creating separate columns for each State category. Then marking a 1 or 0 on each row record, indicating whether the category State exists for the given row record.
 
-![](img\img4.PNG)
+![](img/img4.PNG)
 
 Thus, when adding these dummy variables to our equation, we add an individual State column separately as an independent variable (as opposed to the original State column that contains all the states in string values). So D1 in this case will be New York column data. Also, bear in mind we ignore the other State columns as well (i.e. California and any other state). By including only one of the State columns is enough to preserve the data needed from the dummy variable column. Doing so will avoid the dummy variable trap. For categorical data it&#39;s more or less like having a switch, where the value will be either 1 or 0 across all categories. Hence these are not acting as separate linear input data, so we should not include them all or else the Linear Regression model will treat them as such, causing the dummy variable trap, ultimately causing our model to predict incorrectly.
 
-![](img\img5.PNG)
+![](img/img5.PNG)
 
 Also, to bear in mind is that in real life scenario, you will be facing a lot of data. Some are relevant and significant to our model&#39;s prediction while others are simply noise. Hence you do not want to include all data in your model. Therefore, in building your Multiple Linear Regression model, there are 5 models (methods 2 to 4 are also referred to as Stepwise Regression):
 
